@@ -1,0 +1,45 @@
+html, body, header, main, footer{
+    border: 0;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+h1{
+    padding: 30px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50px;
+    font-size: 100px;
+}
+body{
+    height: 100dvh;
+    background-color: rgb(204, 255, 252);
+    color: rgb(0, 0, 0);
+}
+#contador{
+    font-size: 100px;
+}
+#inputs{
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 15px;
+    margin: 30px;
+}
+input{
+    width: 200px;
+    height: 50px;
+    color: rgb(172, 47, 255);
+    background-color: white;
+    border: 3px solid;
+    font-size: 20px;
+    font-weight: 700;
+    border-radius: 10px;
+}
+input:hover{
+    box-shadow: 0px 0px 15px black;
+    border-color: black;
+}
