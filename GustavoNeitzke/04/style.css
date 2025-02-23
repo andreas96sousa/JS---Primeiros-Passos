@@ -1,0 +1,78 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+body{
+    height: 100dvh;
+    background-color: rgb(41, 41, 122);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+}
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+    width: 100%;
+    background-color: yellow;
+    line-height: 10px;
+    h2{
+        font-size: medium;
+    }
+    h1{
+        font-size: xx-large;
+    }
+}
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+section{
+    width: 70%;
+    background-color: rgb(175, 175, 175);
+    height: 400px;
+    flex-direction: column;
+    border-radius: 20px;
+    filter: drop-shadow(0px 0px 10px rgb(131, 131, 22)); 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    div{
+        width: 70%;
+    }
+}
+#text1, #text2{
+    width: 40%;
+    height: 40px;
+    padding: 5px;
+    text-align: center;
+    font-size: large;
+    border-radius: 10px;
+    border: 0px;
+}
+.button{
+    width: 21%;
+    font-weight: 900;
+    height: 40px;
+    padding: 5px;
+    text-align: center;
+    font-size: large;
+    border-radius: 10px;
+    background-color: blueviolet;
+    color: white;
+    border: 2px solid black;
+}
+#button:hover{
+    background-color: rgb(69, 22, 112);
+    color: white;
+    border: 2px solid white;
+    box-shadow: 0px 0px 10px blueviolet;
+
+}
