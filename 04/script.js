@@ -1,6 +1,7 @@
 const anteriorbtn = document.querySelector("#anteriorbtn");
 const proximobtn = document.querySelector("#proximobtn");
 let nomeDoCliente = document.querySelector("#nomedocliente");
+let loremDoCliente = document.querySelector("#loremdocliente")
 
 proximobtn.addEventListener("click", () => proximoCliente());
 anteriorbtn.addEventListener("click", () => anteriorCliente());
@@ -28,24 +29,36 @@ const cliente04 = {
 
 const clientes = [cliente01, cliente02, cliente03, cliente04];
 
-let numero = 1;
-nomeDoCliente.innerText = clientes[numero - 1].nome;
+
+let numero = 1
+nomeDoCliente.textContent = clientes[0].nome;
+loremDoCliente.textContent = clientes[0].lorem;
+
 function proximoCliente() {
   numero = numero + 1;
-  if (numero > 4) {
-    numero = 1; // Reinicia para 1 ao ultrapassar 4
 
-    nomeDoCliente.innerText = clientes[0].nome;
+  if (numero > 4) {
+    numero = 1; // Reinicia primeiro
   }
+
+  nomeDoCliente.textContent = clientes[numero - 1].nome;  
+  loremDoCliente.textContent = clientes[numero - 1].lorem;  
+  
   let imagem = document.querySelector("#imagemCliente");
   imagem.setAttribute("src", "media/cliente" + numero + ".jpg");
+
 }
 
 function anteriorCliente() {
   numero = numero - 1;
-  if (numero < 1) {
+  
+  if (numero < 1) {  
     numero = 4; // Reinicia para 4 se for menor que 1
   }
+  
+  nomeDoCliente.textContent = clientes[numero - 1].nome
+  loremDoCliente.textContent = clientes[numero - 1].lorem;  
+
   let imagem = document.querySelector("#imagemCliente");
   imagem.setAttribute("src", "media/cliente" + numero + ".jpg");
 }
