@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EX-09</title>
+  </head>
+
+  <body>
+    <h1 style="font-family: Arial, Helvetica, sans-serif">
+      Contador de cliques!
+    </h1>
+    <br />
+    <input
+      type="button"
+      id="contarBtn"
+      value="Clique em mim!"
+      style="padding: 30px"
+    />
+    <input
+      type="button"
+      id="zerarBtn"
+      value="Zerar Contador!"
+      style="padding: 30px"
+    />
+
+    <p style="color: white">result</p>
+  </body>
+
+  <script>
+    const contbtn = document.querySelector("#contarBtn");
+    const zerarbtn = document.querySelector("#zerarBtn");
+    let resultado = document.querySelector("p");
+
+    contbtn.addEventListener("click", contar);
+    zerarbtn.addEventListener("click", zerar);
+
+    let count = 0;
+    function contar() {
+      count = count + 1;
+
+      resultado.innerHTML = `<p>Número de Clicks: <strong>${count}</strong></p><br>`;
+      resultado.style.color = "black";
+    }
+
+    function zerar() {
+      count = 0;
+
+      resultado.innerHTML = `<strong>Contador zerado!</strong></p><br>`;
+      resultado.style.color = "black";
+    }
+  </script>
+</html>

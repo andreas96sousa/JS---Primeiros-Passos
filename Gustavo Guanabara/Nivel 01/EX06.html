@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EX-06</title>
+  </head>
+  <body>
+    <h1 style="font-family: Arial, Helvetica, sans-serif">
+      Somando dois números!
+    </h1>
+    <br />
+    <input type="button" value="Clique para calcular!" style="padding: 30px" />
+
+    <p style="color: white">result</p>
+  </body>
+
+  <script>
+    const clickbtn = document.querySelector('input[type="button"]');
+    let resultado = document.querySelector("p");
+
+    clickbtn.addEventListener("click", somar);
+
+    function somar() {
+      let num1 = Number(window.prompt("Digite o número A: "));
+      let num2 = Number(window.prompt("Digite o número B: "));
+      let soma = num1 + num2;
+      resultado.innerHTML = `A soma entre <mark><strong>${num1}</strong></mark> e <mark><strong>${num2}</strong></mark>, é <mark><strong>${soma}</strong></mark>!`;
+      resultado.style.color = "black";
+    }
+  </script>
+</html>

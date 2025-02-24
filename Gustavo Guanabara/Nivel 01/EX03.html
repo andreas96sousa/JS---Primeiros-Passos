@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EX-03</title>
+  </head>
+  <body>
+    <h1 style="font-family: Arial, Helvetica, sans-serif">
+      Trabalhando com dados 1.0!
+    </h1>
+    <br />
+    <input type="button" value="Clique para começar!" style="padding: 30px" />
+  </body>
+
+  <script>
+    const clickbtn = document.querySelector('input[type="button"]');
+
+    clickbtn.addEventListener("click", nomeRequest);
+
+    function nomeRequest() {
+      let nome = window.prompt("Olá, como você se chama?");
+      window.alert(`Olá ${nome}, é um prazer te conhecer!!`);
+    }
+  </script>
+</html>
