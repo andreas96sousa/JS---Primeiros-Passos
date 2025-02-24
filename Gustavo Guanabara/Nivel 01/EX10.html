@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EX-10</title>
+  </head>
+
+  <body style="line-height: 5px;">
+    <h1 style="font-family: Arial, Helvetica, sans-serif">
+      JavaScript Externo
+    </h1>
+    <br />
+    <input
+      type="button"
+      id="act1"
+      value="Ação 01!"
+      style="padding: 30px"
+    />
+    <input
+      type="button"
+      id="act2"
+      value="Ação 02!"
+      style="padding: 30px"
+    />
+    <input
+      type="button"
+      id="act3"
+      value="Ação 03!"
+      style="padding: 30px"
+    />
+    <input
+      type="button"
+      id="act4"
+      value="Ação 04!"
+      style="padding: 30px"
+    />
+    <p style="color: white"></p>
+  </body>
+
+  <script>
+    const act1 = document.querySelector("#act1");
+    const act2 = document.querySelector("#act2");
+    const act3 = document.querySelector("#act3");
+    const act4 = document.querySelector("#act4");
+    let resultado = document.querySelector("p");
+
+    act1.addEventListener("click", regisAct1);
+    act2.addEventListener("click", regisAct2);
+    act3.addEventListener("click", regisAct3);
+    act4.addEventListener("click", regisAct4);
+
+    function regisAct1(){
+        resultado.innerHTML += `<p>Você apertou no botão <strong>01!</strong></p><br>`;
+        resultado.style.color = "black";
+      }
+    function regisAct2(){
+        resultado.innerHTML += `<p>Você apertou no botão <strong>02!</strong></p><br>`;
+        resultado.style.color = "black";
+      }
+    function regisAct3(){
+        resultado.innerHTML += `<p>Você apertou no botão <strong>03!</strong></p><br>`;
+        resultado.style.color = "black";
+      }
+    function regisAct4(){
+        resultado.innerHTML += `<p>Você apertou no botão <strong>04!</strong></p><br>`;
+        resultado.style.color = "black";
+      }
+  </script>
+</html>

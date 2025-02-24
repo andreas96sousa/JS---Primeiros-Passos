@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EX-02</title>
+  </head>
+  <body>
+    <h1 style="font-family: Arial, Helvetica, sans-serif">
+      Interagindo com um botão!
+    </h1>
+    <br />
+    <input type="button" value="Click em mim!" style="padding: 30px" />
+  </body>
+  <script>
+    const clickbtn = document.querySelector('input[type="button"]');
+    clickbtn.addEventListener("click", clicar);
+    function clicar() {
+      window.alert("Você clicou no botão!");
+    }
+  </script>
+</html>

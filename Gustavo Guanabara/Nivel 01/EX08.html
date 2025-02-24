@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EX-08</title>
+  </head>
+
+  <body>
+    <h1 style="font-family: Arial, Helvetica, sans-serif">
+      Vários cálculos em JS!
+    </h1>
+    <br />
+    <input type="button" value="Clique para calcular!" style="padding: 30px" />
+
+    <p style="color: white">result</p>
+  </body>
+
+  <script>
+    const clickbtn = document.querySelector('input[type="button"]');
+    let resultado = document.querySelector("p");
+
+    clickbtn.addEventListener("click", calcular);
+
+    function calcular() {
+      let num = Number(window.prompt("Digite um número: "));
+
+      resultado.innerHTML = `<p>O número a ser analisado aqui será o <strong>${num}</strong></p><hr>`;
+      resultado.innerHTML += `<p>O seu valor absoluto é ${Math.abs(num)}</p>`;
+      resultado.innerHTML += `<p>A sua parte inteira é ${Math.trunc(num)}</p>`;
+      resultado.innerHTML += `<p>O valor inteiro mais próximo é ${Math.round(
+        num
+      )}</p>`;
+      resultado.innerHTML += `<p>A sua raiz quadrada é ${Math.sqrt(num)}</p>`;
+      resultado.innerHTML += `<p>A sua raiz cúbica é ${Math.cbrt(num)}</p>`;
+      resultado.innerHTML += `<p>O valor de ${num}<sup>2</sup> é ${Math.pow(
+        num,
+        2
+      )}</p>`;
+      resultado.innerHTML += `<p>O valor de ${num}<sup>3</sup> é ${Math.pow(
+        num,
+        3
+      )}</p>`;
+
+      resultado.style.color = "black";
+    }
+  </script>
+</html>

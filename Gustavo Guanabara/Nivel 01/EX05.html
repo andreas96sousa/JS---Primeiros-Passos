@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EX-05</title>
+  </head>
+  <body>
+    <h1 style="font-family: Arial, Helvetica, sans-serif">
+      Trabalhando com números!
+    </h1>
+    <br />
+    <input type="button" value="Clique para calcular!" style="padding: 30px" />
+
+    <p style="color: white">Result</p>
+  </body>
+
+  <script>
+    const clickbtn = document.querySelector('input[type="button"]');
+    let resultado = document.querySelector("p");
+
+    window.alert("Seja bem-vindo(a) ao meu site!");
+
+    clickbtn.addEventListener("click", calcular);
+
+    function calcular() {
+      let num = Number(window.prompt("Digite um número: "));
+      let dobro = num * 2;
+      let metade = num / 2;
+      resultado.innerHTML = `O dobro de <b>${num}</b>, é <b>${dobro}</b>, e a metade é <b>${metade}</b>!`;
+      resultado.style.color = "black";
+    }
+  </script>
+</html>

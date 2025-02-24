@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EX-04</title>
+  </head>
+  <body>
+    <h1 style="font-family: Arial, Helvetica, sans-serif">
+      Trabalhando com Dados v2.0!
+    </h1>
+    <br />
+    <input type="button" value="Clique para começar!" style="padding: 30px" />
+
+    <p style="color: white">Result</p>
+  </body>
+
+  <script>
+    const clickbtn = document.querySelector('input[type="button"]');
+    let paragrafo = document.querySelector("p");
+
+    clickbtn.addEventListener("click", nomeRequest);
+
+    function nomeRequest() {
+      let nome = window.prompt("Olá, como você se chama?");
+      paragrafo.innerHTML = `Olá <b>${nome}</b>, é um prazer te conhecer!`;
+      paragrafo.style.color = "black";
+    }
+  </script>
+</html>

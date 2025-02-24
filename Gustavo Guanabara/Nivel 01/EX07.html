@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EX-07</title>
+  </head>
+  <body>
+    <h1 style="font-family: Arial, Helvetica, sans-serif">
+      Média do aluno v1.0
+    </h1>
+    <br />
+    <input type="button" value="Clique para calcular!" style="padding: 30px" />
+
+    <p style="color: white">result</p>
+  </body>
+
+  <script>
+    const clickbtn = document.querySelector('input[type="button"]');
+    let resultado = document.querySelector("p");
+    const body = document.querySelector("body");
+    body.style.lineHeight = "1px"
+
+    clickbtn.addEventListener("click", calcMedia);
+
+    function calcMedia() {
+      let nome = prompt("Qual o Nome do Aluno?")
+      let n1 = Number(window.prompt("Digite a Nota A: "));
+      let n2 = Number(window.prompt("Digite a Nota B: "));
+      let media = (n1 + n2) / 2;
+      resultado.innerHTML = `<p>Nome do Aluno: <mark><strong>${nome}</strong></mark></p> <br>`
+      resultado.innerHTML += `<p>Nota 01: <mark><strong>${n1}</strong></mark></p><br>`
+      resultado.innerHTML += `<p>Nota 02: <mark><strong>${n2}</strong></mark></p><br>` 
+      resultado.innerHTML += `<p>Média: <mark><strong>${media}</strong></mark></p><br>` 
+      resultado.style.color = "black"; 
+    }
+  </script>
+</html>
