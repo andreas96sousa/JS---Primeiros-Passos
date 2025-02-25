@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EX-12</title>
+  </head>
+  <body style="font-family: Arial, Helvetica, sans-serif">
+    <h1>É par ou é ímpar?</h1>
+    <br />
+    <input type="button" value="Clique para iniciar!" style="padding: 30px" />
+
+    <p style="color: white">result</p>
+  </body>
+
+  <script>
+    const clickbtn = document.querySelector('input[type="button"]');
+    let resultado = document.querySelector("p");
+
+    clickbtn.addEventListener("click", imparoupar);
+
+    function imparoupar() {
+      let num = Number(prompt(`Digite um Número: `));
+      if (num % 2 == 0) {
+        resultado.innerHTML = `O número ${num} é <b>Par!</b> <br> <hr>`;
+        resultado.style.color = "black";
+      }
+      if (num % 2 == 1) {
+        resultado.innerHTML = `O número ${num} é <b>Impar!</b> <br> <hr>`;
+        resultado.style.color = "black";
+      } else {
+        alert("Número Inválido");
+      }
+    }
+  </script>
+</html>
