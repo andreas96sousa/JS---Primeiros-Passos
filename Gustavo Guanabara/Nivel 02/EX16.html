@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EX-16</title>
+  </head>
+  <body style="font-family: Arial, Helvetica, sans-serif">
+    <h1>Calculando a idade!</h1>
+    <br />
+    <input type="button" value="Iniciar!" style="padding: 30px" />
+
+    <p style="color: white">result</p>
+  </body>
+
+  <script>
+    const clickbtn = document.querySelector('input[type="button"]');
+    let resultado = document.querySelector("p");
+
+    clickbtn.addEventListener("click", saberIdade);
+
+    function saberIdade() {
+      let nasc = Number(prompt(`Em que ano você nasceu??`))
+      let data = new Date;
+      let anoAtual = data.getFullYear()
+      let idade = anoAtual - nasc
+      
+      resultado.innerHTML = `Você fez ou faz ${idade} nesse ano de ${anoAtual}`
+      resultado.style.color = "black"
+    }
+  </script>
+</html>
