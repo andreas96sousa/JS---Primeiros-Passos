@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EX-11</title>
+  </head>
+  <body>
+    <h1 style="font-family: Arial, Helvetica, sans-serif">
+      Média do aluno v2.0
+    </h1>
+    <br />
+    <input type="button" value="Clique para calcular!" style="padding: 30px" />
+
+    <p style="color: white">result</p>
+  </body>
+
+  <script>
+    const clickbtn = document.querySelector('input[type="button"]');
+    let resultado = document.querySelector("p");
+
+    clickbtn.addEventListener("click", media);
+
+    function media() {
+      let nome = prompt(`Nome do Aluno: `);
+      let num1 = Number(window.prompt("Digite a Nota A (0-10): "));
+      if (isNaN(num1)) {
+        alert(`Nota ${num1} Inválida!`);
+      } 
+      else 
+      {
+        let num2 = Number(window.prompt("Digite a Nota B (0-10): "));
+        if (isNaN(num2)) 
+        {
+        alert(`Nota ${num2} Inválida!`);
+        }
+        else
+        {
+        let media = (num1 + num2) / 2;
+        resultado.innerHTML = `Aluno: <mark><strong>${nome}</strong></mark><br>`;
+        resultado.innerHTML += `Nota A: <mark><strong>${num1}</strong></mark><br>`;
+        resultado.innerHTML += `Nota B: <mark><strong>${num2}</strong></mark><br>`;
+        resultado.innerHTML += `Média: <mark><strong>${media}</strong></mark><br>`;
+        if (media >= 6) {
+          resultado.innerHTML += `Mensagem: <mark><strong id="mensagem">Aprovado</strong></mark><br>`;
+
+          let mensagem = document.querySelector("#mensagem");
+          resultado.style.color = "black";
+          mensagem.style.color = "green";
+          }
+          if (media < 6) {
+          resultado.innerHTML += `Mensagem: <mark><strong id="mensagem">Reprovado</strong></mark><br>`;
+
+          let mensagem = document.querySelector("#mensagem");
+          resultado.style.color = "black";
+          mensagem.style.color = "red";
+          }
+
+      }
+        
+      }
+    }
+  </script>
+</html>
