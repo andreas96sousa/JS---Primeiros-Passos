@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EX-15</title>
+  </head>
+  <body style="font-family: Arial, Helvetica, sans-serif">
+    <h1>Analisando data e hora do Sistema!</h1>
+    <br />
+    <input type="button" value="Clique aqui!" style="padding: 30px" />
+
+    <p style="color: white">result</p>
+  </body>
+
+  <script>
+    const clickbtn = document.querySelector('input[type="button"]');
+    let resultado = document.querySelector("p");
+
+    clickbtn.addEventListener("click", sistemainteracao);
+
+    function sistemainteracao() {
+      let diasDaSemana = [
+        "Domingo",
+        "Segunda-Feira",
+        "Terça-Feira",
+        "Quarta-Feira",
+        "Quinta-Feira",
+        "Sexta-Feira",
+        "Sábado",
+      ];
+      let mesesDoAno = [
+        "Janeiro",
+        "Fevereiro",
+        "Março",
+        "Abril",
+        "Maio",
+        "Junho",
+        "Julho",
+        "Agosto",
+        "Setembro",
+        "Outubro",
+        "Novembro",
+        "Dezembro",
+      ];
+      let dataCompleta = new Date();
+      let dia = dataCompleta.getDate();
+      let mes = mesesDoAno[dataCompleta.getMonth()];
+      let ano = dataCompleta.getFullYear();
+      let diasemana = diasDaSemana[dataCompleta.getDay()];
+      let horas = dataCompleta.getHours();
+      let minutos = dataCompleta.getMinutes();
+      let segundos = dataCompleta.getSeconds();
+
+      resultado.innerHTML = `<hr>`;
+      resultado.innerHTML += `Dia: <b>${dia}</b><hr>`;
+      resultado.innerHTML += `Mês: <b>${mes}</b><hr>`;
+      resultado.innerHTML += `Ano: <b>${ano}</b><hr>`;
+      resultado.innerHTML += `Dia da Semana: <b>${diasemana}</b><hr>`;
+      resultado.innerHTML += `Hora: <b>${horas}</b><hr>`;
+      resultado.innerHTML += `Minutos: <b>${minutos}</b><hr>`;
+      resultado.innerHTML += `Segundos: <b>${segundos}</b><hr>`;
+
+      resultado.style.color = "black";
+    }
+  </script>
+</html>

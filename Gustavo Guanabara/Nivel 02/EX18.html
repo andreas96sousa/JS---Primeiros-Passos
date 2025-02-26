@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EX-17</title>
+  </head>
+  <body style="font-family: Arial, Helvetica, sans-serif">
+    <h1>Gerador de números!</h1>
+    <br />
+    <input type="button" id="btnAdvinhar" value="Tente Advinhar!" style="padding: 30px" />
+
+    <p></p>
+  </body>
+
+  <script>
+    const advinharBtn = document.querySelector("#btnAdvinhar");
+    const resultado = document.querySelector("p")
+
+    advinharBtn.addEventListener("click", jogo)
+
+    let min = 1
+    let max = 100
+    let dif = max - min
+    let aleatorio = Math.random()
+    let sorteado = Math.trunc(dif * aleatorio)
+
+    function jogo() {
+      let jogadorNum = Number(prompt(`Tente Advinhar: `))
+
+      if(jogadorNum == sorteado){
+        resultado.innerHTML += `<hr><strong>Você acertou</strong>, o numero que pensei é o <strong>${sorteado}</strong>`
+        advinharBtn.innerHTML = ""
+      }else{
+        if(jogadorNum > sorteado){
+          resultado.innerHTML += `<hr>Errado, o numero que pensei é <strong>MENOR</strong>`
+        }else{
+          resultado.innerHTML += `<hr>Errado, o numero que pensei é <strong>MAIOR</strong>`
+          
+        }
+      }
+      
+
+    }
+  </script>
+</html>

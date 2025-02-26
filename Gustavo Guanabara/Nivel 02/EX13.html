@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EX-13</title>
+  </head>
+  <body style="font-family: Arial, Helvetica, sans-serif">
+    <h1>Maior valor</h1>
+    <br />
+    <input type="button" value="Clique para iniciar!" style="padding: 30px" />
+
+    <p style="color: white">result</p>
+  </body>
+
+  <script>
+    const clickbtn = document.querySelector('input[type="button"]');
+    let resultado = document.querySelector("p");
+
+    clickbtn.addEventListener("click", maioremenor);
+
+    function maioremenor() {
+      let num1 = Number(prompt("Digite o 1º Número: "));
+      let num2 = Number(prompt("Digite o 2º Número: "));
+
+      resultado.innerHTML = `Analisando os Números <b>${num1}</b> e <b>${num2}</b>,<br>`;
+
+      if (num1 < num2) {
+        let maior = num2;
+        let menor = num1;
+        resultado.innerHTML += `O maior deles é o <b>${maior}</b> !!<br>`;
+        resultado.innerHTML += `e o menor deles é o <b>${menor}</b> !!`;
+        resultado.style.color = "black";
+      }
+      if (num2 < num1) {
+        let maior = num1;
+        let menor = num2;
+        resultado.innerHTML += `O maior deles é o <b>${maior}</b> !!<br>`;
+        resultado.innerHTML += `e o menor deles é o <b>${menor}</b> !!`;
+        resultado.style.color = "black";
+      }
+    }
+  </script>
+</html>
