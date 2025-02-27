@@ -1,19 +1,60 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>EX-17</title>
-  </head>
-  <body style="font-family: Arial, Helvetica, sans-serif">
-    <h1>Gerador de números!</h1>
-    <br />
-    <input type="button" id="btnAdvinhar" value="Tente Advinhar!" style="padding: 30px" />
 
-    <p></p>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EX-19</title>
+</head>
 
-  <script>
+<body style="font-family: Arial, Helvetica, sans-serif">
+  <h1>Gerador de números!</h1>
+  <br />
+  <input type="button" id="btnAdvinhar" value="Tente Advinhar!" style="padding: 30px" />
+
+  <p></p>
+</body>
+
+<script>
+  const advinharBtn = document.querySelector("#btnAdvinhar");
+  const resultado = document.querySelector("p")
+
+  advinharBtn.addEventListener("click", escolhaOperacao)
+
+  function escolhaOperacao() {
+    let num1 = Number(prompt("Digite o Número A: "))
+    let num2 = Number(prompt("Digite o Número B: "))
     
-  </script>
+    let opc = Number(prompt(
+      "[1] - Somar\n" +
+      "[2] - Subtrair\n" +
+      "[3] - Multiplicar\n" +
+      "[4] - Dividir\n"
+    ))
+    switch (opc) {
+      case 1:
+        var calc = num1 + num2
+        resultado.innerHTML = `A soma de <b>${num1} e ${num2}</b> é igual a <b>${calc}</b><hr>`
+        break
+      case 2:
+        var calc = num1 - num2
+        resultado.innerHTML = `A subtração de <b>${num1} e ${num2}</b> é igual a <b>${calc}</b><hr>`
+        break
+      case 3:
+        var calc = num1 * num2
+        resultado.innerHTML = `A multiplicação de <b>${num1} e ${num2}</b> é igual a <b>${calc}</b><hr>`
+        break
+      case 4:
+        var calc = num1 / num2
+        resultado.innerHTML = `A divisão entre <b>${num1} e ${num2}</b> é igual a <b>${calc}</b><hr>`
+        break
+      default:
+        resultado.innerHTML = `Digitado: <b>${num1} e ${num2}</b> <hr><b>Qual foi calabreso, escreve direito</b>`
+
+
+    }
+  }
+
+</script>
+
 </html>

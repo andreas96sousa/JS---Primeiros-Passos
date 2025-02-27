@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EX-20</title>
+</head>
+
+<body style="font-family: Arial, Helvetica, sans-serif">
+  <h1>Gerador de números!</h1>
+  <br />
+  <input type="button" id="btnAdvinhar" value="Tente Advinhar!" style="padding: 30px" />
+
+  <p></p>
+</body>
+
+<script>
+  const advinharBtn = document.querySelector("#btnAdvinhar");
+  const resultado = document.querySelector("p")
+
+  advinharBtn.addEventListener("click", estacoes)
+
+  function estacoes() {
+    let mes = prompt(`Digite a o mês para verificar: `)
+    
+    switch (mes.toUpperCase()) {
+      case "JANEIRO": case "FEVEREIRO": case "MARÇO":
+        resultado.innerHTML = `Você está no mês <strong>${mes} e é Inverno</strong><hr>`
+        break
+      case "ABRIL": case "MAIO": case "JUNHO":
+        resultado.innerHTML = `Você está no mês <strong>${mes} e é Primavera</strong><hr>`
+        break
+      case "JULHO": case "AGOSTO": case "SETEMBRO":
+        resultado.innerHTML = `Você está no mês <strong>${mes} e é Verão</strong><hr>`
+        break
+      case "OUTUBRO": case "NOVEMBRO": case "DEZEMBRO":
+        resultado.innerHTML = `Você está no mês <strong>${mes} e é Outono</strong><hr>`
+        break
+
+      default:
+        resultado.innerHTML = `<strong>${mes}? <hr> ESCREVE DIREITO CALABRESO </strong> `
+
+    }
+
+
+
+
+
+  }
+
+</script>
+
+</html>
