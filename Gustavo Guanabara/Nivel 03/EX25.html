@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EX-25</title>
+</head>
+
+<body style="font-family: Arial, Helvetica, sans-serif">
+  <form action="">
+  <h1>Pegando dados de um formulário!</h1>
+  <br />
+  <input type="text" id="nome" placeholder="Nome">
+  <hr>
+  <input type="text" id="numero" placeholder="Numero">
+  <hr>
+  <input type="text" id="idade" placeholder="Idade">
+  <hr>
+  <input type="text" id="mail" placeholder="E-mail">
+  <hr>
+  <input type="button" value="Guardar Dados" id="get">
+  <input type="button" value="Mostrar Dados" id="show">
+  </form>
+
+  <p></p>
+</body>
+
+<script>
+  const nome = document.querySelector("#nome")
+  const numero = document.querySelector("#numero")
+  const idade = document.querySelector("#idade")
+  const mail = document.querySelector("#mail")
+  const get = document.querySelector("#get")
+  const show = document.querySelector("#show")
+
+  const title = document.querySelector("h1")
+  const resultado = document.querySelector("p")
+
+  get.addEventListener("click", guardar)
+  show.addEventListener("click", mostrar)
+
+  let pessoa1 = {}
+
+  function guardar(){
+    pessoa1.nome = nome.value;
+    pessoa1.telefone = numero.value;
+    pessoa1.idade = idade.value;
+    pessoa1.mail = mail.value;
+ 
+    title.innerHTML = `Dados do: <span id="span">${pessoa1.nome}</span> <br>exibidos abaixo`
+    const span = document.querySelector("#span")
+    span.style.color = "red"
+    resultado.innerHTML = `Guardado <hr>`
+  }
+  
+  function mostrar(){
+
+    resultado.innerHTML = `Nome: ${pessoa1.nome}<hr>`
+    resultado.innerHTML += `Idade: ${pessoa1.idade}<hr>`
+    resultado.innerHTML += `E-mail: ${pessoa1.mail}<hr>`
+    resultado.innerHTML += `Número: ${pessoa1.telefone}<hr>`
+    
+  }
+</script>
+
+</html>

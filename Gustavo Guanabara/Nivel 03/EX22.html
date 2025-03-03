@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EX-22</title>
+</head>
+
+<body style="font-family: Arial, Helvetica, sans-serif">
+  <h1>Contando e marcando impares e pares!</h1>
+  <br />
+  <input type="text" name="numero" placeholder="Digite um Numero">
+  <hr>
+  <input type="button" id="btncontar" value="Conte!" style="padding: 30px" />
+  <input type="button" id="btnlimpar" value="Limpar!" style="padding: 30px" />
+
+  <p></p>
+</body>
+
+<script>
+  const contarBtn = document.querySelector("#btncontar");
+  const limparBtn = document.querySelector("#btnlimpar");
+  const digiteNum = document.querySelector("input")
+  const resultado = document.querySelector("p")
+  const resultado2 = document.querySelector("h1")
+
+  contarBtn.addEventListener("click", contando)
+  limparBtn.addEventListener("click", limpar)
+
+  function limpar() {
+    digiteNum.value = ""
+    resultado.innerHTML = ""
+    resultado2.innerHTML = "Contando e marcando impares e pares!"
+  }
+  function contando() {
+    resultado2.innerHTML = `Contando até ${digiteNum.value} marcando impares e pares!`
+    for(i = 1; i <= Number(digiteNum.value); i++){
+    if(i%2==0){
+      resultado.innerHTML += `O numero ${i} é <b>Par</b><hr>`
+    }else{
+      resultado.innerHTML += `O numero ${i} é <b>Impar</b><hr>`
+      
+    }
+  }
+  }
+
+</script>
+
+</html>

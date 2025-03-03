@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EX-26</title>
+</head>
+
+<body style="font-family: Arial, Helvetica, sans-serif">
+  <form action="">
+    <h1>Contagem "inteligente"!</h1>
+    <h2 id="selectednums">Digite os Números</h2>
+    <input type="text" id="inicio" placeholder="Inicio">
+    <hr>
+    <input type="text" id="fim" placeholder="Fim">
+    <hr>
+    <input type="button" value="Guardar Dados" id="get">
+  </form>
+  <p id="resultado"></p>
+</body>
+
+<script>
+  const initial = document.querySelector("#inicio")
+  const finale = document.querySelector("#fim")
+
+  const get = document.querySelector("#get")
+
+  const selectednums = document.querySelector("#selectednums")
+  const resultado = document.querySelector("#resultado")
+
+  get.addEventListener("click", contar)
+
+  function contar() {
+    selectednums.innerHTML = `Inicio: ${initial.value} <br> Fim: ${finale.value}`
+    resultado.innerHTML = `Iniciando... <hr>`
+
+    for (i = Number(initial.value); i <= Number(finale.value); i ++) {
+      resultado.innerHTML += ` <b>${i}</b> -`
+    }
+  }
+
+
+</script>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EX-24</title>
+</head>
+
+<body style="font-family: Arial, Helvetica, sans-serif">
+  <h1>Contagem regressiva!</h1>
+  <br />
+  <input type="text" name="numero" placeholder="Digite um Numero">
+  <hr>
+  <input type="button" id="btncontar" value="Conte!" style="padding: 30px" />
+  <input type="button" id="btnlimpar" value="Limpar!" style="padding: 30px" />
+
+  <p></p>
+</body>
+
+<script>
+  const contarBtn = document.querySelector("#btncontar");
+  const limparBtn = document.querySelector("#btnlimpar");
+  const digiteNum = document.querySelector("input")
+  const resultado = document.querySelector("p")
+  const resultado2 = document.querySelector("h1")
+
+  contarBtn.addEventListener("click", contando)
+  limparBtn.addEventListener("click", limpar)
+
+  function limpar() {
+    digiteNum.value = ""
+    resultado.innerHTML = ""
+    resultado2.innerHTML = "Contagem regressiva!"
+  }
+  function contando() {
+    resultado2.innerHTML = `Contagem regressiva de ${digiteNum.value} até 01!`
+    for(i = Number(digiteNum.value); i > 0; i--){
+      resultado.innerHTML += `Número: <b>${i}</b><hr>`
+    // if(i%2==0){
+    // }
+  }
+  }
+
+</script>
+
+</html>
