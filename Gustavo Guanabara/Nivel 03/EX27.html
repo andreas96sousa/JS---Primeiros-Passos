@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EX-27</title>
+</head>
+
+<body style="font-family: Arial, Helvetica, sans-serif">
+  <form action="">
+    <h1>Super Tabuada!</h1>
+    <h3 id="title">Escreva um número na caixa a seguir e te mostrarei a tabuada dele.</h3>
+    <input type="text" id="numero" placeholder="Número">
+    <input type="button" value="Tabuada" id="get">
+    <hr>
+  </form>
+  <h2 id="subtitle"></h2>
+  <p id="resultado"></p>
+</body>
+
+<script>
+  const numero = document.querySelector("#numero")
+
+  const get = document.querySelector("#get")
+
+  const subtitle = document.querySelector("#subtitle")
+  const resultado = document.querySelector("#resultado")
+
+  get.addEventListener("click", tabuada)
+
+  function tabuada() {
+    subtitle.innerHTML = `A Tabuada de ${numero.value} é: `
+    for (i = 1; i <= 10; i++) {
+      let calc = Number(numero.value * i)
+      if(i == 1){
+        resultado.innerHTML = `${numero.value} x ${i} = <strong>${calc}</strong> <br>`
+      }else{
+        resultado.innerHTML += `${numero.value} x ${i} = <strong>${calc}</strong> <br>`
+
+      }
+    }
+  }
+
+
+</script>
+
+</html>
